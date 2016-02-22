@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>RxNetwork.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>RxTableView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>RxWhy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>26457B691C775777009ED146</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26457B821C77579F009ED146</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26CC092A1C7989A7006B721F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26D37A641C787B3700D7B1B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26D37A7A1C787B5B00D7B1B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
