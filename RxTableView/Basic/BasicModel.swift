@@ -40,3 +40,9 @@ func <(lhs: BasicModel, rhs: BasicModel) -> Bool {
 func <=(lhs: BasicModel, rhs: BasicModel) -> Bool {
     return lhs.age <= rhs.age
 }
+
+extension BasicModel: CustomStringConvertible {
+    var description: String {
+        return "\(name)'s age is \(age)"
+    }
+}

@@ -12,6 +12,9 @@
 		26457B991C77588A009ED146 /* BindingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26457B981C77588A009ED146 /* BindingsViewController.swift */; };
 		26457B9B1C7758AA009ED146 /* ContentOffsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26457B9A1C7758AA009ED146 /* ContentOffsetViewController.swift */; };
 		26457B9D1C7758C5009ED146 /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26457B9C1C7758C5009ED146 /* TapViewController.swift */; };
+		2649A0AC1C80119600F032B1 /* SupportFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649A0AB1C80119600F032B1 /* SupportFunction.swift */; };
+		2649A0AD1C80119900F032B1 /* SupportFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649A0AB1C80119600F032B1 /* SupportFunction.swift */; };
+		2649A0AE1C80119A00F032B1 /* SupportFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649A0AB1C80119600F032B1 /* SupportFunction.swift */; };
 		266E196A1C7AB90900D8562C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E19691C7AB90900D8562C /* UserTableViewCell.swift */; };
 		266E196E1C7AFF7E00D8562C /* Request+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E196D1C7AFF7E00D8562C /* Request+ObjectMapper.swift */; };
 		266E19711C7B2D8200D8562C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E19701C7B2D8200D8562C /* UserModel.swift */; };
@@ -56,6 +59,7 @@
 		26457B981C77588A009ED146 /* BindingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingsViewController.swift; sourceTree = "<group>"; };
 		26457B9A1C7758AA009ED146 /* ContentOffsetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentOffsetViewController.swift; sourceTree = "<group>"; };
 		26457B9C1C7758C5009ED146 /* TapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapViewController.swift; sourceTree = "<group>"; };
+		2649A0AB1C80119600F032B1 /* SupportFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportFunction.swift; sourceTree = "<group>"; };
 		266E19691C7AB90900D8562C /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewCell.swift; path = ../UserTableViewCell.swift; sourceTree = "<group>"; };
 		266E196D1C7AFF7E00D8562C /* Request+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+ObjectMapper.swift"; sourceTree = "<group>"; };
 		266E19701C7B2D8200D8562C /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				26CC091A1C797EB5006B721F /* AppDelegate.swift */,
 				26CC091B1C797EB5006B721F /* Assets.xcassets */,
 				26CC091C1C797EB5006B721F /* Info.plist */,
+				2649A0AB1C80119600F032B1 /* SupportFunction.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -612,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2649A0AC1C80119600F032B1 /* SupportFunction.swift in Sources */,
 				26457B991C77588A009ED146 /* BindingsViewController.swift in Sources */,
 				26457B9D1C7758C5009ED146 /* TapViewController.swift in Sources */,
 				26CC091D1C797EB5006B721F /* AppDelegate.swift in Sources */,
@@ -628,6 +634,7 @@
 				26CC09501C79C7C0006B721F /* MoyaTableViewController.swift in Sources */,
 				26CC09401C7989E4006B721F /* AppDelegate.swift in Sources */,
 				26CC09581C79CE54006B721F /* Observable+ObjectMapper.swift in Sources */,
+				2649A0AE1C80119A00F032B1 /* SupportFunction.swift in Sources */,
 				266E196A1C7AB90900D8562C /* UserTableViewCell.swift in Sources */,
 				26CC09571C79CE54006B721F /* Response+ObjectMapper.swift in Sources */,
 				266E19711C7B2D8200D8562C /* UserModel.swift in Sources */,
@@ -650,6 +657,7 @@
 				26D37AA11C78823C00D7B1B4 /* AdvanceTableViewCell.swift in Sources */,
 				26D37AA31C78843800D7B1B4 /* BasicModel.swift in Sources */,
 				26D37AA91C78859200D7B1B4 /* AdvanceModel.swift in Sources */,
+				2649A0AD1C80119900F032B1 /* SupportFunction.swift in Sources */,
 				26D37A9D1C78822700D7B1B4 /* SectionsTableViewCell.swift in Sources */,
 				26D37A9F1C78823000D7B1B4 /* SelectTableViewCell.swift in Sources */,
 			);

@@ -14,9 +14,9 @@ typealias SelectSectionModel = AnimatableSectionModel<String, SelectModel>
 
 class SelectTableViewController: UITableViewController {
 
-    var disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
 
-    var sections = Variable([SelectSectionModel]())
+    let sections = Variable([SelectSectionModel]())
     
     static let initialValue: [SelectModel] = [
         SelectModel(name: "Jack", age: 18),
@@ -30,12 +30,16 @@ class SelectTableViewController: UITableViewController {
         tableView.dataSource = nil
         tableView.delegate = nil
         
-        
         tableView.rx_itemSelected
-            .subscribeNext { [unowned self] in
-                self.showUserInfo($0.row)
-            }
-            .addDisposableTo(disposeBag)
+            .subscribeNext { indexPath in
+                let userInfo = SelectTableViewController.initialValue[indexPath.row]
+                Alert.showInfo(userInfo.name, message: "\(userInfo.age)")
+        }.addDisposableTo(disposeBag)
+        
+//        tableView.rx_modelSelected(IdentitifiableValue<SelectModel>)
+//            .subscribeNext { model in
+//                Alert.showInfo(model.identity.name, message: "\(model.identity.age)")
+//            }.addDisposableTo(disposeBag)
         
         let tvDataSource = RxTableViewSectionedReloadDataSource<SelectSectionModel>()
         tvDataSource.configureCell = { (tv, ip, i) in
@@ -51,15 +55,4 @@ class SelectTableViewController: UITableViewController {
         
     }
 
-}
-
-// MARK: - showUserInfo
-
-extension SelectTableViewController {
-    func showUserInfo(index: Int) {
-        let userInfo = SelectTableViewController.initialValue[index]
-        let alertController = UIAlertController(title: "You selected \(userInfo.name)", message: "His age is \(userInfo.age)", preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-        presentViewController(alertController, animated: true, completion: nil)
-    }
 }

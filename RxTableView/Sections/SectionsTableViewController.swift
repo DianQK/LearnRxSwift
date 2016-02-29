@@ -14,9 +14,9 @@ typealias TableSectionModel = AnimatableSectionModel<String, SectionsModel>
 
 class SectionsTableViewController: UITableViewController {
     
-    var disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
     /// 保存所有的 Section
-    var sections = Variable([TableSectionModel]())
+    let sections = Variable([TableSectionModel]())
     
     static let initialValue: [SectionsModel] = [
         SectionsModel(name: "Jack", age: 18),
@@ -43,7 +43,10 @@ class SectionsTableViewController: UITableViewController {
             .addDisposableTo(disposeBag)
         
         sections.value = [TableSectionModel(model: "", items: SectionsTableViewController.initialValue)]
-
+        
+        tableView.rx_modelSelected(IdentitifiableValue<SectionsModel>).subscribeNext {
+            print($0)
+        }.addDisposableTo(disposeBag)
     }
 
 }

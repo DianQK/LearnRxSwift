@@ -22,3 +22,9 @@ extension SectionsModel: Hashable {
 func ==(lhs: SectionsModel, rhs: SectionsModel) -> Bool {
     return lhs.name == rhs.name
 }
+
+extension SectionsModel: CustomStringConvertible {
+    var description: String {
+        return "\(name)'s age is \(age)"
+    }
+}

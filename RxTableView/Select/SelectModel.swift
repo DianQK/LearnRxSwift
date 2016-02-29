@@ -22,3 +22,9 @@ extension SelectModel: Hashable {
 func ==(lhs: SelectModel, rhs: SelectModel) -> Bool {
     return lhs.name == rhs.name
 }
+
+extension SelectModel: CustomStringConvertible {
+    var description: String {
+        return "\(name)'s age is \(age)"
+    }
+}

@@ -35,7 +35,16 @@ class BasicTableViewController: UITableViewController {
             }.addDisposableTo(disposeBag)
         
         dataSource.value.appendContentsOf(BasicTableViewController.initialValue)
+        /**
+        *  Select
+        */
+        tableView.rx_modelSelected(BasicModel)
+            .subscribeNext { model in
+                Alert.showInfo(model.name, message: "\(model.age)")
+            }.addDisposableTo(disposeBag)
         
     }
+    
+    
 
 }
