@@ -63,6 +63,7 @@
 		266E19691C7AB90900D8562C /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewCell.swift; path = ../UserTableViewCell.swift; sourceTree = "<group>"; };
 		266E196D1C7AFF7E00D8562C /* Request+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+ObjectMapper.swift"; sourceTree = "<group>"; };
 		266E19701C7B2D8200D8562C /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		26942DA01C8494630091ED4A /* Rx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Rx.playground; sourceTree = "<group>"; };
 		26CC091A1C797EB5006B721F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CC091B1C797EB5006B721F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CC091C1C797EB5006B721F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		26457B611C775777009ED146 = {
 			isa = PBXGroup;
 			children = (
+				26942DA01C8494630091ED4A /* Rx.playground */,
 				26457B841C77579F009ED146 /* RxWhy */,
 				26D37A7C1C787B5B00D7B1B4 /* RxTableView */,
 				26CC092C1C7989A7006B721F /* RxNetwork */,
