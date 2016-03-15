@@ -13,6 +13,9 @@
 ## 本章目录:
 
 1. [创建序列 Observable](Observable)
+2. [什么是 Subject](Subject)
+3. [变换 Observables](Transforming)
+4. [过滤 Observables](Filtering)
 
 */
 

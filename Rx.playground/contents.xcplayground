@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='Index'/>
         <page name='Observable'/>
         <page name='Subject'/>
+        <page name='Transforming'/>
+        <page name='Filtering'/>
     </pages>
 </playground>
