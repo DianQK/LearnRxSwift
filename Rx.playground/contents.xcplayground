@@ -6,5 +6,6 @@
         <page name='Subject'/>
         <page name='Transforming'/>
         <page name='Filtering'/>
+        <page name='Combining'/>
     </pages>
 </playground>

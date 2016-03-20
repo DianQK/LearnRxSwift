@@ -1,4 +1,4 @@
-//: [上一节](@previous)
+//: [上一节](@previous) - [目录](Index)
 /*:
 ## 创建序列 Observable
 
