@@ -7,5 +7,6 @@
         <page name='Transforming'/>
         <page name='Filtering'/>
         <page name='Combining'/>
+        <page name='Error_Handling'/>
     </pages>
 </playground>

@@ -17,6 +17,7 @@
 3. [变换 Observables](Transforming)
 4. [过滤 Observables](Filtering)
 5. [合并 Observables](Combining)
+6. [错误处理](Error_Handing)
 
 */
 
