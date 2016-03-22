@@ -3,8 +3,8 @@ platform :ios, "8.0"
 use_frameworks!
 
 def rx_pods
-    pod 'RxSwift', '~>2.3'
-    pod 'RxCocoa', '~>2.3'
+    pod 'RxSwift',:git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'develop'
+    pod 'RxCocoa',:git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'develop'
 end
 
 def rx_test_pods
@@ -12,7 +12,7 @@ def rx_test_pods
 end
 
 def rx_ext_pods
-    pod 'RxDataSources', '~>0.6.1'
+    pod 'RxDataSources',:git => 'https://github.com/RxSwiftCommunity/RxDataSources.git'
 end
 
 def net_pods

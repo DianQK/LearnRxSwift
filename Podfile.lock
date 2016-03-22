@@ -15,12 +15,12 @@ PODS:
   - RxAlamofire/Core (2.2):
     - Alamofire (~> 3.1)
     - RxSwift (~> 2.1)
-  - RxCocoa (2.3.0):
-    - RxSwift (~> 2.3)
+  - RxCocoa (2.3.1):
+    - RxSwift (~> 2.3.1)
   - RxDataSources (0.6.1):
     - RxCocoa (~> 2.2)
     - RxSwift (~> 2.2)
-  - RxSwift (2.3.0)
+  - RxSwift (2.3.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -28,9 +28,30 @@ DEPENDENCIES:
   - Moya/RxSwift
   - ObjectMapper
   - RxAlamofire
-  - RxCocoa (~> 2.3)
-  - RxDataSources
-  - RxSwift (~> 2.3)
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, branch `develop`)
+  - RxDataSources (from `https://github.com/RxSwiftCommunity/RxDataSources.git`)
+  - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`, branch `develop`)
+
+EXTERNAL SOURCES:
+  RxCocoa:
+    :branch: develop
+    :git: https://github.com/ReactiveX/RxSwift.git
+  RxDataSources:
+    :git: https://github.com/RxSwiftCommunity/RxDataSources.git
+  RxSwift:
+    :branch: develop
+    :git: https://github.com/ReactiveX/RxSwift.git
+
+CHECKOUT OPTIONS:
+  RxCocoa:
+    :commit: 6df77da4745338fa13986d044f6b764af4c3d99f
+    :git: https://github.com/ReactiveX/RxSwift.git
+  RxDataSources:
+    :commit: cc27fbd986a4f6ae0b1dc78ccbc49b3f89120ff8
+    :git: https://github.com/RxSwiftCommunity/RxDataSources.git
+  RxSwift:
+    :commit: 6df77da4745338fa13986d044f6b764af4c3d99f
+    :git: https://github.com/ReactiveX/RxSwift.git
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
@@ -38,10 +59,10 @@ SPEC CHECKSUMS:
   ObjectMapper: 528b1a6677a6acac7747edd508576983e76a9148
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   RxAlamofire: 250b7846cedbd189d6190e4f83caa01ee1f1eceb
-  RxCocoa: cde4e993f496d2577bc3ba8b7dc7bf55a4ed809a
+  RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
   RxDataSources: f201802aa904bcbc17c38b82e92f282df401a0ce
-  RxSwift: 0df59cc5edf28a31dbf83b049220b4b8e76b07c8
+  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
 
-PODFILE CHECKSUM: 393e4fd116bf9f55e13f07e04b09efb7cd06308a
+PODFILE CHECKSUM: aaf403273b59a6cfcd5d90deb02d5949ba5197f8
 
 COCOAPODS: 1.0.0.beta.4

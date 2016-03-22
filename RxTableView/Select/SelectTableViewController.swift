@@ -34,12 +34,14 @@ class SelectTableViewController: UITableViewController {
             .subscribeNext { indexPath in
                 let userInfo = SelectTableViewController.initialValue[indexPath.row]
                 Alert.showInfo(userInfo.name, message: "\(userInfo.age)")
-        }.addDisposableTo(disposeBag)
+            }
+            .addDisposableTo(disposeBag)
         
-//        tableView.rx_modelSelected(IdentitifiableValue<SelectModel>)
-//            .subscribeNext { model in
-//                Alert.showInfo(model.identity.name, message: "\(model.identity.age)")
-//            }.addDisposableTo(disposeBag)
+        tableView.rx_modelSelected(IdentifiableValue<SelectModel>)
+            .subscribeNext { model in
+                Alert.showInfo(model.identity.name, message: "\(model.identity.age)")
+            }
+            .addDisposableTo(disposeBag)
         
         let tvDataSource = RxTableViewSectionedReloadDataSource<SelectSectionModel>()
         tvDataSource.configureCell = { (_, tv, ip, i) in
