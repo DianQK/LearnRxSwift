@@ -42,7 +42,7 @@ class SelectTableViewController: UITableViewController {
 //            }.addDisposableTo(disposeBag)
         
         let tvDataSource = RxTableViewSectionedReloadDataSource<SelectSectionModel>()
-        tvDataSource.configureCell = { (tv, ip, i) in
+        tvDataSource.configureCell = { (_, tv, ip, i) in
             let cell = tv.dequeueReusableCellWithIdentifier("SelectCell") as! SelectTableViewCell
             cell.nameLabel.text = i.value.name
             cell.ageLabel.text = String(i.value.age)

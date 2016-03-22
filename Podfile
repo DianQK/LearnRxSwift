@@ -3,8 +3,8 @@ platform :ios, "8.0"
 use_frameworks!
 
 def rx_pods
-    pod 'RxSwift'
-    pod 'RxCocoa'
+    pod 'RxSwift', '~>2.3'
+    pod 'RxCocoa', '~>2.3'
 end
 
 def rx_test_pods
@@ -12,7 +12,7 @@ def rx_test_pods
 end
 
 def rx_ext_pods
-    pod 'RxDataSources'
+    pod 'RxDataSources', '~>0.6.1'
 end
 
 def net_pods

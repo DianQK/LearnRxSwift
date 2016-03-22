@@ -8,5 +8,6 @@
         <page name='Filtering'/>
         <page name='Combining'/>
         <page name='Error_Handling'/>
+        <page name='Other'/>
     </pages>
 </playground>
