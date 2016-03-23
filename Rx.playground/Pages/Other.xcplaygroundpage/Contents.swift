@@ -174,17 +174,12 @@ example("doOn") {
 
 /*:
 ## 条件和布尔操作
-
-Operators that evaluate one or more Observables or items emitted by Observables.
-
 */
 
 /*:
 ### `takeUntil`
  
 当另一个序列开始发射值时，忽略原序列发射的值。
-
-Discard any items emitted by an Observable after a second Observable emits an item or terminates.
 
 ![]( https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/takeuntil.png )
 
@@ -217,8 +212,6 @@ example("takeUntil") {
 ### `takeWhile`
 
 根据一个状态判断是否继续向下发射值。这其实类似于 `filter` 。需要注意的就是 `filter` 和 `takeWhile` 什么时候更能清晰表达你的意思，就用哪个。
- 
-Mirror items emitted by an Observable until a specified condition becomes false
 
 ![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/takewhile.png)
 
@@ -294,8 +287,6 @@ example("amb 2") {
 
  串行的合并多个序列。你可能会想起 `switchLatest` 操作符，他们有些类似，都是将序列整理到一起。不同的就是 `concat` 不会在丢弃旧序列的任何一个值。全部按照序列发射的顺序排队发射。
 
-Emit the emissions from two or more Observables without interleaving them.
-
 ![]( https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/concat.png )
 
 */
@@ -361,7 +352,6 @@ example("reduce") {
  
 可连接的序列和一般的序列基本是一样的，不同的就是你可以用可连接序列调整序列发射的实际。只有当你调用 `connect` 方法时，序列才会发射。比如我们可以在所有订阅者订阅了序列后开始发射。下面的几个例子都是无限执行的，你可以自行调用每个函数感受不同的操作的结果。
 
-Specialty Observables that have more precisely-controlled subscription dynamics.
 */
 
 /*:
