@@ -2,7 +2,7 @@
 //  AlamofireTableViewController.swift
 //  StudyRxSwift
 //
-//  Created by 宋宋 on 16/2/21.
+//  Created by DianQK on 16/2/21.
 //  Copyright © 2016年 DianQK. All rights reserved.
 //
 

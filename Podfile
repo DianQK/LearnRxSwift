@@ -41,3 +41,7 @@ target 'RxNetwork' do
     net_pods
     model_pods
 end
+
+target 'RxScheduler' do
+    rx_pods
+end

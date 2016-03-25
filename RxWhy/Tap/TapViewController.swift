@@ -2,7 +2,7 @@
 //  TapViewController.swift
 //  StudyRxSwift
 //
-//  Created by 宋宋 on 16/2/19.
+//  Created by DianQK on 16/2/19.
 //  Copyright © 2016年 DianQK. All rights reserved.
 //
 
