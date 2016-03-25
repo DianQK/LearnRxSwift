@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>RxExtensions.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>RxNetwork.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,7 +17,7 @@
 		<key>RxScheduler.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>3</integer>
 		</dict>
 		<key>RxTableView.xcscheme_^#shared#^_</key>
 		<dict>
@@ -27,6 +32,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>260C31FE1CA526F100081BDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>26356E281CA2FC5C00148B03</key>
 		<dict>
 			<key>primary</key>
