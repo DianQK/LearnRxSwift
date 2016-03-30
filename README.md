@@ -1,7 +1,5 @@
 ## 学习 RxSwift 系列教程
 
-# 000 RxSwift 学习指导索引
-
 ## RxSwift 系列教程
 
 * **前言**
@@ -36,10 +34,12 @@
   * [022 第四章 第四节： RxAnimation](http://t.swift.gg/)
   * ~~ [022 第四章 第四节：补充](http://t.swift.gg) ~~ *占坑*
 
-### 番外 Tips
+## 番外 Tips
 
 * [101 番外：为什么 label.rx_text 不是 ObservableType](http://t.swift.gg/d/16-101-label-rx-text-observabletype)
 * [102 番外：更优雅的处理 TableView Select](http://t.swift.gg/d/14-102-tableview-select)
+
+（称之为教程有些夸张了~跑。。。
 
 ## LICENSE
 
