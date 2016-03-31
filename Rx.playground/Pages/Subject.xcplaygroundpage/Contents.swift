@@ -31,24 +31,25 @@ import RxSwift
 
 */
 
-let disposeBag = DisposeBag()
+example("publishSubject") {
 
-let publishSubject = PublishSubject<String>()
+    let publishSubject = PublishSubject<String>()
 
-publishSubject.subscribe { e in
-    print("Subscription: 1, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    _ = publishSubject.subscribe { e in
+            print("Subscription: 1, event: \(e)")
+        }
 
-publishSubject.on(.Next("a"))
-publishSubject.on(.Next("b"))
+    publishSubject.on(.Next("a"))
+    publishSubject.on(.Next("b"))
 
-publishSubject.subscribe { e in /// 我们可以在这里看到，这个订阅只收到了两个数据，只有 "c" 和 "d"
-    print("Subscription: 2, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    _ = publishSubject.subscribe { e in /// 我们可以在这里看到，这个订阅只收到了两个数据，只有 "c" 和 "d"
+        print("Subscription: 2, event: \(e)")
+        }
 
-publishSubject.on(.Next("c"))
-publishSubject.on(.Next("d"))
+    publishSubject.on(.Next("c"))
+    publishSubject.on(.Next("d"))
 
+}
 /*:
 
 ## ReplaySubject
@@ -59,22 +60,29 @@ publishSubject.on(.Next("d"))
 
 */
 
-let replaySubject = ReplaySubject<String>.create(bufferSize: 2)
+example("replaySubject") {
 
-replaySubject.subscribe { e in
+let replaySubject = ReplaySubject<String>.createUnbounded()
+
+_ = replaySubject.subscribe { e in
     print("Subscription: 1, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    }
 
 replaySubject.on(.Next("a"))
 replaySubject.on(.Next("b"))
 
-replaySubject.subscribe { e in /// 我们可以在这里看到，这个订阅收到了四个数据
+_ = replaySubject.subscribe { e in /// 我们可以在这里看到，这个订阅收到了四个数据
     print("Subscription: 2, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    }
 
 replaySubject.on(.Next("c"))
 replaySubject.on(.Next("d"))
 
+}
+
+/*:
+事实上 `ReplaySubject` 还有一个方法 `public static func create(bufferSize bufferSize: Int) -> ReplaySubject<Element>` ，我们可以通过制定具体的 buffer 来确定我们要保留多少个值留给即将订阅的观察者。
+*/
 
 /*:
 
@@ -89,39 +97,40 @@ When an observer subscribes to a `BehaviorSubject`, it begins by emitting the it
 ![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/behaviorsubject_error.png)
 */
 
+example("behaviorSubject") {
 let behaviorSubject = BehaviorSubject(value: "z")
-behaviorSubject.subscribe { e in
+_ = behaviorSubject.subscribe { e in
     print("Subscription: 1, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    }
 
 behaviorSubject.on(.Next("a"))
 behaviorSubject.on(.Next("b"))
 
-behaviorSubject.subscribe { e in /// 我们可以在这里看到，这个订阅收到了四个数据
+_ = behaviorSubject.subscribe { e in /// 我们可以在这里看到，这个订阅收到了四个数据
     print("Subscription: 2, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    }
 
 behaviorSubject.on(.Next("c"))
 behaviorSubject.on(.Next("d"))
 behaviorSubject.on(.Completed)
-
+}
 
 /*:
 `Variable` 是 `BehaviorSubject` 的一个封装。相比 `BehaviorSubject` ，它不会因为错误终止也不会正常终止，是一个无限序列。
 */
-
+example("variable") {
 let variable = Variable("z")
-variable.asObservable().subscribe { e in
+_ = variable.asObservable().subscribe { e in
     print("Subscription: 1, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    }
 variable.value = "a"
 variable.value = "b"
-variable.asObservable().subscribe { e in
+_ = variable.asObservable().subscribe { e in
     print("Subscription: 1, event: \(e)")
-    }.addDisposableTo(disposeBag)
+    }
 variable.value = "c"
 variable.value = "d"
-
+}
 /*:
 我们最常用的 Subject 应该就是 Variable 。它满足了我们很多需求，订阅时就发射一次最近的序列，我们只需要在这里保留完整的数据，那每一个订阅者都可以获得完整的数据。通常我们会用它做数据源，例子请参见 [初章 第三节 创建一个 TableView]() 。
 */
