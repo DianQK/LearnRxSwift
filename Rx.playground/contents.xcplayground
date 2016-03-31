@@ -9,5 +9,6 @@
         <page name='Combining'/>
         <page name='Error_Handling'/>
         <page name='Other'/>
+        <page name='Units'/>
     </pages>
 </playground>
