@@ -24,12 +24,6 @@ class ObservableLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rx_sentMessage(#selector(UIViewController.viewDidAppear(_:)))
-            .subscribeNext { [unowned self] _ in
-                self.usernameTextField.becomeFirstResponder()
-            }
-            .addDisposableTo(rx_disposeBag)
-        
         let loginTrigger = [loginButton.rx_tap, usernameTextField.rx_controlEvent(.EditingDidEndOnExit)]
             .toObservable()
             .merge()
