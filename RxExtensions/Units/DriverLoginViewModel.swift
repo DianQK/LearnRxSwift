@@ -1,8 +1,8 @@
 //
-//  LoginViewModel.swift
+//  DriverLoginViewModel.swift
 //  LearnRxSwift
 //
-//  Created by 宋宋 on 16/3/31.
+//  Created by DianQK on 16/3/31.
 //  Copyright © 2016年 DianQK. All rights reserved.
 //
 
@@ -12,31 +12,29 @@ import RxCocoa
 import Alamofire
 import RxAlamofire
 
-class LoginViewModel {
+class DriverLoginViewModel {
     
-    let loginEnabled = Variable(false)
-    let loginRequesting = Variable(false)
+    let loginEnabled = PublishSubject<Bool>()
+    let loginRequesting = PublishSubject<Bool>()
     
-    let loginResult: Observable<(Bool, String)>
+    let loginResult: Driver<(Bool, String)>
     
     private let disposeBag = DisposeBag()
     
-    init(input: (usename: Observable<String>, tap: Observable<Void>)) {
+    init(input: (usename: Driver<String>, tap: Driver<Void>)) {
         
         input.usename
             .map { $0.characters.count > 4 }
-            .bindTo(loginEnabled)
+            .drive(loginEnabled)
             .addDisposableTo(disposeBag)
         
         let loginRequest = input.tap
-            .withLatestFrom(loginEnabled.asObservable()).filter { $0 }
+            .withLatestFrom(loginEnabled.asDriver(onErrorJustReturn: false)).filter { $0 }
             .withLatestFrom(input.usename)
             .map { ["username": $0] }
-            .shareReplay(1)
         
         let loginResponse = loginRequest
-            .flatMapLatest { requestJSON(.POST, host + "/login", parameters: $0) }
-            .shareReplay(1)
+            .flatMapLatest { requestJSON(.POST, host + "/login", parameters: $0).asDriver(onErrorJustReturn: (NSHTTPURLResponse(), ["message": "2000", "data": "网络错误"])) }
         
         [loginRequest.map { _ in true }, loginResponse.map { _ in false }]
             .toObservable()
@@ -50,11 +48,12 @@ class LoginViewModel {
                 return (true, json["data"]!)
             } else if json["message"] == "1000" {
                 return (false, json["data"]!)
-            } else {
+            } else if json["message"] == "2000" {
+                return (false, json["data"]!)
+            } else  {
                 return (false, "未知错误")
             }
-            }
-            .shareReplay(1)
+        }
         
     }
     

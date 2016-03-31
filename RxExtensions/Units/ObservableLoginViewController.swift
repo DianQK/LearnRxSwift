@@ -1,8 +1,8 @@
 //
-//  LoginViewController.swift
+//  ObservableLoginViewController.swift
 //  LearnRxSwift
 //
-//  Created by 宋宋 on 16/3/31.
+//  Created by DianQK on 16/3/31.
 //  Copyright © 2016年 DianQK. All rights reserved.
 //
 
@@ -13,13 +13,13 @@ import NSObject_Rx
 import Alamofire
 import RxAlamofire
 
-class LoginViewController: UIViewController {
+class ObservableLoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
     
-    var viewModel: LoginViewModel!
+    var viewModel: ObservableLoginViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
             .toObservable()
             .merge()
         
-        viewModel = LoginViewModel(input: (
+        viewModel = ObservableLoginViewModel(input: (
             usename: usernameTextField.rx_text.asObservable(),
             tap: loginTrigger))
 
@@ -57,6 +57,18 @@ class LoginViewController: UIViewController {
                     print(error)
                 default: break
                 }
+            }
+            .addDisposableTo(rx_disposeBag)
+        
+        view.rx_sentMessage(#selector(UIView.touchesBegan(_:withEvent:)))
+            .subscribeNext { [unowned self] _ in
+                self.usernameTextField.resignFirstResponder()
+            }
+            .addDisposableTo(rx_disposeBag)
+        
+        rx_sentMessage(#selector(UIViewController.viewDidAppear(_:)))
+            .subscribeNext { [unowned self] _ in
+                self.usernameTextField.becomeFirstResponder()
             }
             .addDisposableTo(rx_disposeBag)
         

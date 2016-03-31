@@ -74,7 +74,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="dHv-cj-8ky" kind="show" id="s7w-wS-NaZ"/>
+                                            <segue destination="gEF-If-RyY" kind="show" id="DfO-t5-kgt"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="246" y="470"/>
         </scene>
-        <!--登录-->
+        <!--Observable-->
         <scene sceneID="p9F-Vg-xXk">
             <objects>
-                <viewController title="登录" id="dHv-cj-8ky" customClass="LoginViewController" customModule="RxExtensions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dHv-cj-8ky" customClass="ObservableLoginViewController" customModule="RxExtensions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GgY-I9-kEm"/>
                         <viewControllerLayoutGuide type="bottom" id="YzU-HB-QdN"/>
@@ -251,6 +251,10 @@
                             <constraint firstItem="bB0-Uj-H1F" firstAttribute="top" secondItem="KBr-WG-Td7" secondAttribute="bottom" constant="60" id="pU3-jE-A8m"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Observable" id="Xuw-b2-gdG"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Observable" id="a8A-wx-MaI"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="loginButton" destination="rtz-Z1-4ml" id="Rah-aH-vko"/>
                         <outlet property="usernameTextField" destination="klM-Dt-A9z" id="qJW-yv-uV1"/>
@@ -258,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLJ-CF-rFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="1230"/>
+            <point key="canvasLocation" x="686" y="1976"/>
         </scene>
         <!--Spring Animations-->
         <scene sceneID="IHL-uX-TeF">
@@ -383,6 +387,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00O-Kt-xht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1641" y="872"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bnx-NO-duj">
+            <objects>
+                <tabBarController id="gEF-If-RyY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="AL8-bK-r6D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dHv-cj-8ky" kind="relationship" relationship="viewControllers" id="xUl-D6-o71"/>
+                        <segue destination="u9P-mn-Qw0" kind="relationship" relationship="viewControllers" id="rjf-uR-m0w"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGC-Wu-Dgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="1190"/>
+        </scene>
+        <!--Driver-->
+        <scene sceneID="55e-tj-G0Z">
+            <objects>
+                <viewController title="Driver" id="u9P-mn-Qw0" customClass="DriverLoginViewController" customModule="RxExtensions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kES-KR-OBV"/>
+                        <viewControllerLayoutGuide type="bottom" id="hzf-G4-ZyJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t6e-KQ-Uml">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="TLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ky4-EN-eQL">
+                                <rect key="frame" x="240" y="94" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="6EQ-gT-CAb"/>
+                                    <constraint firstAttribute="width" constant="120" id="MeI-oa-uNu"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-dn-vu3">
+                                <rect key="frame" x="20" y="274" width="560" height="103"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入 SwiftGG" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t9I-OS-J8N">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Znl-lJ-dpa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHD-eO-xXf">
+                                        <rect key="frame" x="0.0" y="59" width="560" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="rJM-Lm-NLF"/>
+                                        </constraints>
+                                        <state key="normal" title="登录">
+                                            <color key="titleColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgf-dn-vu3" firstAttribute="leading" secondItem="t6e-KQ-Uml" secondAttribute="leadingMargin" id="A32-5X-LX5"/>
+                            <constraint firstItem="dgf-dn-vu3" firstAttribute="top" secondItem="ky4-EN-eQL" secondAttribute="bottom" constant="60" id="AJr-7e-aJ8"/>
+                            <constraint firstItem="ky4-EN-eQL" firstAttribute="top" secondItem="kES-KR-OBV" secondAttribute="bottom" constant="30" id="sWq-5f-YJt"/>
+                            <constraint firstItem="ky4-EN-eQL" firstAttribute="centerX" secondItem="t6e-KQ-Uml" secondAttribute="centerX" id="uVr-Vo-8ir"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dgf-dn-vu3" secondAttribute="trailing" id="vD9-f9-qOx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Driver" id="091-dJ-OHm"/>
+                    <navigationItem key="navigationItem" title="Driver" id="yZL-YN-66W"/>
+                    <connections>
+                        <outlet property="loginButton" destination="OHD-eO-xXf" id="QXd-Xr-0H9"/>
+                        <outlet property="usernameTextField" destination="t9I-OS-J8N" id="H6f-kb-sgW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qa0-nJ-TQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="1967"/>
         </scene>
     </scenes>
     <resources>

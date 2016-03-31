@@ -38,8 +38,10 @@
 		266E196A1C7AB90900D8562C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E19691C7AB90900D8562C /* UserTableViewCell.swift */; };
 		266E196E1C7AFF7E00D8562C /* Request+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E196D1C7AFF7E00D8562C /* Request+ObjectMapper.swift */; };
 		266E19711C7B2D8200D8562C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E19701C7B2D8200D8562C /* UserModel.swift */; };
-		269CAABB1CACD23000057E87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABA1CACD23000057E87 /* LoginViewController.swift */; };
-		269CAABD1CACD25F00057E87 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABC1CACD25F00057E87 /* LoginViewModel.swift */; };
+		269CAABB1CACD23000057E87 /* ObservableLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABA1CACD23000057E87 /* ObservableLoginViewController.swift */; };
+		269CAABD1CACD25F00057E87 /* ObservableLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABC1CACD25F00057E87 /* ObservableLoginViewModel.swift */; };
+		269CAABF1CACF1D700057E87 /* DriverLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABE1CACF1D700057E87 /* DriverLoginViewController.swift */; };
+		269CAAC11CACF1EA00057E87 /* DriverLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAAC01CACF1EA00057E87 /* DriverLoginViewModel.swift */; };
 		26CC091D1C797EB5006B721F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC091A1C797EB5006B721F /* AppDelegate.swift */; };
 		26CC09201C797EBB006B721F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC091A1C797EB5006B721F /* AppDelegate.swift */; };
 		26CC09251C798578006B721F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC091B1C797EB5006B721F /* Assets.xcassets */; };
@@ -101,8 +103,10 @@
 		266E196D1C7AFF7E00D8562C /* Request+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+ObjectMapper.swift"; sourceTree = "<group>"; };
 		266E19701C7B2D8200D8562C /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		26942DA01C8494630091ED4A /* Rx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Rx.playground; sourceTree = "<group>"; };
-		269CAABA1CACD23000057E87 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		269CAABC1CACD25F00057E87 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		269CAABA1CACD23000057E87 /* ObservableLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableLoginViewController.swift; sourceTree = "<group>"; };
+		269CAABC1CACD25F00057E87 /* ObservableLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableLoginViewModel.swift; sourceTree = "<group>"; };
+		269CAABE1CACF1D700057E87 /* DriverLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverLoginViewController.swift; sourceTree = "<group>"; };
+		269CAAC01CACF1EA00057E87 /* DriverLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverLoginViewModel.swift; sourceTree = "<group>"; };
 		26CC091A1C797EB5006B721F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CC091B1C797EB5006B721F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CC091C1C797EB5006B721F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -304,8 +308,10 @@
 		269CAAB91CACD21800057E87 /* Units */ = {
 			isa = PBXGroup;
 			children = (
-				269CAABA1CACD23000057E87 /* LoginViewController.swift */,
-				269CAABC1CACD25F00057E87 /* LoginViewModel.swift */,
+				269CAABA1CACD23000057E87 /* ObservableLoginViewController.swift */,
+				269CAABC1CACD25F00057E87 /* ObservableLoginViewModel.swift */,
+				269CAABE1CACF1D700057E87 /* DriverLoginViewController.swift */,
+				269CAAC01CACF1EA00057E87 /* DriverLoginViewModel.swift */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -889,11 +895,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269CAABB1CACD23000057E87 /* LoginViewController.swift in Sources */,
+				269CAABB1CACD23000057E87 /* ObservableLoginViewController.swift in Sources */,
 				260C32151CA530EF00081BDE /* RxOptionalViewController.swift in Sources */,
+				269CAAC11CACF1EA00057E87 /* DriverLoginViewModel.swift in Sources */,
 				260C324A1CA5622600081BDE /* RxAnimationViewController.swift in Sources */,
 				260C32111CA5271400081BDE /* AppDelegate.swift in Sources */,
-				269CAABD1CACD25F00057E87 /* LoginViewModel.swift in Sources */,
+				269CAABD1CACD25F00057E87 /* ObservableLoginViewModel.swift in Sources */,
+				269CAABF1CACF1D700057E87 /* DriverLoginViewController.swift in Sources */,
 				260C32501CA6208B00081BDE /* UIView+IB.swift in Sources */,
 				260C32481CA55C5F00081BDE /* RxAnimation.swift in Sources */,
 				260C32131CA5271A00081BDE /* SupportFunction.swift in Sources */,
