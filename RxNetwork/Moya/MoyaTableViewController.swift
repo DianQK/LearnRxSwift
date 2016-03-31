@@ -36,8 +36,9 @@ class MoyaTableViewController: UITableViewController {
             .bindTo(tableView.rx_itemsWithDataSource(tvDataSource))
             .addDisposableTo(disposeBag)
         
-        UserProvider.request(.Users)
-            .mapObject(UserListModel)
+        UserProvider
+            .request(.Users) // 请求用户s
+            .mapObject(UserListModel) // 将 用户 解析到 Model
             .subscribeNext { [unowned self] userList in
                 self.sections.value.append(MoyaSectionModel(model: "Users", items: userList.users))
             }

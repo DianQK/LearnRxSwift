@@ -7,7 +7,7 @@
 		<key>RxExtensions.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>4</integer>
 		</dict>
 		<key>RxNetwork.xcscheme_^#shared#^_</key>
 		<dict>
@@ -33,6 +33,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>260C31FE1CA526F100081BDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>260C32301CA55BA100081BDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

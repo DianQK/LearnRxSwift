@@ -20,7 +20,8 @@ class ContentOffsetViewController: UITableViewController {
         tableView.delegate = nil
         
         // ---------
-        tableView.rx_contentOffset
+        tableView
+            .rx_contentOffset
             .map { $0.y }
             .subscribeNext { [unowned self] in
                 self.title = "contentOffset.x = \($0)"
@@ -31,6 +32,8 @@ class ContentOffsetViewController: UITableViewController {
             .bindTo(tableView.rx_itemsWithCellIdentifier("Cell", cellType: UITableViewCell.self)) { (_, element, cell) in
                 cell.textLabel?.text = "\(element)"
             }.addDisposableTo(disposeBag)
+        
+//        tableView.contentOffset = 6r7t890
         
     }
 

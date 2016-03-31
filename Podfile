@@ -49,6 +49,7 @@ end
 target 'RxExtensions' do
     rx_pods
     rx_data_pods
+    net_pods
     pod 'RxOptional'
     # pod 'ObservableArray-RxSwift'
     pod 'NSObject+Rx'

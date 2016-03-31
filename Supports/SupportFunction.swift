@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+#if DEBUG
+let host = "https://stg-rxswift.leanapp.cn"
+#else
+let host = "https://rxswift.leanapp.cn"
+#endif
+
 struct Alert {
     
     static func showInfo(title: String, message: String? = nil) {
@@ -36,6 +42,7 @@ struct Alert {
 }
 
 extension UIApplication {
+    
     class func topViewController(base: UIViewController? = UIApplication.sharedApplication().keyWindow?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return topViewController(nav.visibleViewController)
@@ -49,6 +56,21 @@ extension UIApplication {
             return topViewController(presented)
         }
         return base
+    }
+    
+    public var rx_networkActivityIndicatorVisible: AnyObserver<Bool> {
+        return AnyObserver { event in
+            MainScheduler.ensureExecutingOnScheduler()
+            switch event {
+            case .Next(let value):
+                self.networkActivityIndicatorVisible = value
+            case .Error:
+                self.networkActivityIndicatorVisible = false
+                break
+            case .Completed:
+                break
+            }
+        }
     }
 }
 

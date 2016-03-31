@@ -1,0 +1,65 @@
+//
+//  LoginViewController.swift
+//  LearnRxSwift
+//
+//  Created by 宋宋 on 16/3/31.
+//  Copyright © 2016年 DianQK. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+import NSObject_Rx
+import Alamofire
+import RxAlamofire
+
+class LoginViewController: UIViewController {
+
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    var viewModel: LoginViewModel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        rx_sentMessage(#selector(UIViewController.viewDidAppear(_:)))
+            .subscribeNext { [unowned self] _ in
+                self.usernameTextField.becomeFirstResponder()
+            }
+            .addDisposableTo(rx_disposeBag)
+        
+        let loginTrigger = [loginButton.rx_tap, usernameTextField.rx_controlEvent(.EditingDidEndOnExit)]
+            .toObservable()
+            .merge()
+        
+        viewModel = LoginViewModel(input: (
+            usename: usernameTextField.rx_text.asObservable(),
+            tap: loginTrigger))
+
+        viewModel.loginEnabled.asObservable()
+            .bindTo(loginButton.rx_enabled)
+            .addDisposableTo(rx_disposeBag)
+        
+        viewModel.loginRequesting.asObservable()
+            .bindTo(UIApplication.sharedApplication().rx_networkActivityIndicatorVisible)
+            .addDisposableTo(rx_disposeBag)
+        
+        viewModel.loginResult
+            .subscribe { event in
+                switch event {
+                case .Next(let result) where result.0:
+                    Alert.showInfo(result.1)
+                case .Next(let result) where !result.0:
+                    Alert.showInfo(result.1)
+                case .Error(let error):
+                    print(error)
+                default: break
+                }
+            }
+            .addDisposableTo(rx_disposeBag)
+        
+    }
+
+}

@@ -25,6 +25,7 @@ class BindingsViewController: UIViewController {
             .bindTo(greetingLabel.rx_text)
             .addDisposableTo(disposeBag)
         
+        
     }
 
 }

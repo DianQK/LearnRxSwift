@@ -7,6 +7,27 @@
 
 import RxSwift
 
+Observable<Int>.create { observer in
+    
+    for i in 1...10 {
+        observer.onNext(i)
+    }
+    observer.onCompleted()
+    
+    return NopDisposable.instance
+    
+    }
+    .subscribe { event in
+        switch event {
+        case .Next(let value):
+            print(value)
+        case .Error(let error):
+            print(error)
+        case .Completed:
+            print("Completed")
+        }
+}
+
 /*:
 ### create
 使用 Swift 闭包的方式创建序列，这里创建了一个 Just 的示例

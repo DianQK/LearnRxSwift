@@ -8,12 +8,6 @@
 
 import Moya
 
-#if DEBUG
-let host = "https://stg-rxswift.leanapp.cn"
-#else
-let host = "https://rxswift.leanapp.cn"
-#endif
-
 let UserProvider = RxMoyaProvider<UserAPI>()
 
 public enum UserAPI {
