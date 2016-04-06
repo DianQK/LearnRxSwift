@@ -35,8 +35,9 @@
   * [019 第四章 第一节： RxCocoa 的 API](http://t.swift.gg/d/33-019-rxcocoa-api)
   * [020 第四章 第二节： RxExtensions 介绍](http://t.swift.gg/d/34-020-rxextensions)
   * [021 第四章 第三节： Units](http://t.swift.gg/d/39-021-units)
-  * ~~ [022 第四章 第四节： RxAnimation](http://t.swift.gg/) ~~ *占坑*
-  * ~~ [022 第四章 第四节：补充](http://t.swift.gg) ~~ *占坑*
+  * [022 第四章 第五节： RxDelegate](http://t.swift.gg/d/41-022-rxdelegate)
+  * ~~ [023 第四章 第四节： RxAnimation](http://t.swift.gg/) ~~ *占坑*
+  * ~~ [024 第四章 第四节：补充](http://t.swift.gg) ~~ *占坑*
 
 ## 番外 Tips
 
