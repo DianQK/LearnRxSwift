@@ -42,6 +42,10 @@
 		269CAABD1CACD25F00057E87 /* ObservableLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABC1CACD25F00057E87 /* ObservableLoginViewModel.swift */; };
 		269CAABF1CACF1D700057E87 /* DriverLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABE1CACF1D700057E87 /* DriverLoginViewController.swift */; };
 		269CAAC11CACF1EA00057E87 /* DriverLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAAC01CACF1EA00057E87 /* DriverLoginViewModel.swift */; };
+		26BF11901CB4EC7100398378 /* RxDelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BF118F1CB4EC7100398378 /* RxDelegateViewController.swift */; };
+		26BF11921CB4EE6700398378 /* RxDelegateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BF11911CB4EE6700398378 /* RxDelegateButton.swift */; };
+		26BF11941CB4FB5400398378 /* RxDelegateButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BF11931CB4FB5400398378 /* RxDelegateButton+Rx.swift */; };
+		26BF11961CB4FB7A00398378 /* RxDelegateButtonDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BF11951CB4FB7A00398378 /* RxDelegateButtonDelegateProxy.swift */; };
 		26CC091D1C797EB5006B721F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC091A1C797EB5006B721F /* AppDelegate.swift */; };
 		26CC09201C797EBB006B721F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC091A1C797EB5006B721F /* AppDelegate.swift */; };
 		26CC09251C798578006B721F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC091B1C797EB5006B721F /* Assets.xcassets */; };
@@ -107,6 +111,10 @@
 		269CAABC1CACD25F00057E87 /* ObservableLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableLoginViewModel.swift; sourceTree = "<group>"; };
 		269CAABE1CACF1D700057E87 /* DriverLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverLoginViewController.swift; sourceTree = "<group>"; };
 		269CAAC01CACF1EA00057E87 /* DriverLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverLoginViewModel.swift; sourceTree = "<group>"; };
+		26BF118F1CB4EC7100398378 /* RxDelegateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDelegateViewController.swift; sourceTree = "<group>"; };
+		26BF11911CB4EE6700398378 /* RxDelegateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDelegateButton.swift; sourceTree = "<group>"; };
+		26BF11931CB4FB5400398378 /* RxDelegateButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxDelegateButton+Rx.swift"; sourceTree = "<group>"; };
+		26BF11951CB4FB7A00398378 /* RxDelegateButtonDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDelegateButtonDelegateProxy.swift; sourceTree = "<group>"; };
 		26CC091A1C797EB5006B721F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CC091B1C797EB5006B721F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CC091C1C797EB5006B721F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 		260C32001CA526F100081BDE /* RxExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				26BF118E1CB4BE2900398378 /* RxDelegate */,
 				269CAAB91CACD21800057E87 /* Units */,
 				260C32461CA55C4800081BDE /* RxAnimation */,
 				260C32051CA526F100081BDE /* Main.storyboard */,
@@ -314,6 +323,17 @@
 				269CAAC01CACF1EA00057E87 /* DriverLoginViewModel.swift */,
 			);
 			path = Units;
+			sourceTree = "<group>";
+		};
+		26BF118E1CB4BE2900398378 /* RxDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				26BF118F1CB4EC7100398378 /* RxDelegateViewController.swift */,
+				26BF11911CB4EE6700398378 /* RxDelegateButton.swift */,
+				26BF11931CB4FB5400398378 /* RxDelegateButton+Rx.swift */,
+				26BF11951CB4FB7A00398378 /* RxDelegateButtonDelegateProxy.swift */,
+			);
+			path = RxDelegate;
 			sourceTree = "<group>";
 		};
 		26CC09191C797EB5006B721F /* Supports */ = {
@@ -900,10 +920,14 @@
 				269CAAC11CACF1EA00057E87 /* DriverLoginViewModel.swift in Sources */,
 				260C324A1CA5622600081BDE /* RxAnimationViewController.swift in Sources */,
 				260C32111CA5271400081BDE /* AppDelegate.swift in Sources */,
+				26BF11901CB4EC7100398378 /* RxDelegateViewController.swift in Sources */,
+				26BF11921CB4EE6700398378 /* RxDelegateButton.swift in Sources */,
 				269CAABD1CACD25F00057E87 /* ObservableLoginViewModel.swift in Sources */,
 				269CAABF1CACF1D700057E87 /* DriverLoginViewController.swift in Sources */,
 				260C32501CA6208B00081BDE /* UIView+IB.swift in Sources */,
+				26BF11961CB4FB7A00398378 /* RxDelegateButtonDelegateProxy.swift in Sources */,
 				260C32481CA55C5F00081BDE /* RxAnimation.swift in Sources */,
+				26BF11941CB4FB5400398378 /* RxDelegateButton+Rx.swift in Sources */,
 				260C32131CA5271A00081BDE /* SupportFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

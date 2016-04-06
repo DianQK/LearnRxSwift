@@ -6,6 +6,38 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Rx Delegate View Controller-->
+        <scene sceneID="f1m-Ah-xwr">
+            <objects>
+                <viewController storyboardIdentifier="RxDelegateViewController" id="61X-we-YAP" customClass="RxDelegateViewController" customModule="RxExtensions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bVi-cH-psT"/>
+                        <viewControllerLayoutGuide type="bottom" id="VWz-VG-T61"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tlA-Zk-qql">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLM-rQ-gu6" customClass="RxDelegateButton" customModule="RxExtensions" customModuleProvider="target">
+                                <rect key="frame" x="269" y="281" width="63" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LLM-rQ-gu6" firstAttribute="centerY" secondItem="tlA-Zk-qql" secondAttribute="centerY" id="bfU-4c-EuJ"/>
+                            <constraint firstItem="LLM-rQ-gu6" firstAttribute="centerX" secondItem="tlA-Zk-qql" secondAttribute="centerX" id="fR0-4E-TAT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="delegateButton" destination="LLM-rQ-gu6" id="QCw-0j-0Da"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpw-kx-24j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="1275"/>
+        </scene>
         <!--RxExtensions-->
         <scene sceneID="b1T-1Q-HaX">
             <objects>
@@ -75,6 +107,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="gEF-If-RyY" kind="show" id="DfO-t5-kgt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="cxR-lN-SfS" style="IBUITableViewCellStyleDefault" id="3VR-fR-SSx">
+                                        <rect key="frame" x="0.0" y="196" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3VR-fR-SSx" id="and-kJ-cUJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="RxDelegate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cxR-lN-SfS">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="61X-we-YAP" kind="show" id="W2c-vx-9bY"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -404,7 +456,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGC-Wu-Dgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="1190"/>
+            <point key="canvasLocation" x="1094" y="1290"/>
         </scene>
         <!--Driver-->
         <scene sceneID="55e-tj-G0Z">
