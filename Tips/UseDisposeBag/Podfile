@@ -1,0 +1,9 @@
+platform :ios, "8.0"
+
+use_frameworks!
+
+target 'UseDisposeBag' do
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NSObject+Rx'
+end

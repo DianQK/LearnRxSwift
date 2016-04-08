@@ -20,3 +20,5 @@ Pods
 Podfile.lock
 
 LearnRxSwift.xcworkspace/xcuserdata/Qing.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.xcuserstate
