@@ -54,3 +54,10 @@ target 'RxExtensions' do
     # pod 'ObservableArray-RxSwift'
     pod 'NSObject+Rx'
 end
+
+target 'MVVM' do
+    rx_pods
+    pod 'NSObject+Rx'
+    pod 'RxOptional'
+    pod 'Proposer'
+end
