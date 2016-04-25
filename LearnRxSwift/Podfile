@@ -3,8 +3,8 @@ platform :ios, "8.0"
 use_frameworks!
 
 def rx_pods
-    pod 'RxSwift' # ,:git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'develop'
-    pod 'RxCocoa' # ,:git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'develop'
+    pod 'RxSwift', '~>2.4'
+    pod 'RxCocoa', '~>2.4'
 end
 
 def rx_test_pods
