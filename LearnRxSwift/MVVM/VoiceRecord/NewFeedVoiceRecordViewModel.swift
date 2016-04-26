@@ -127,8 +127,6 @@ class NewFeedVoiceRecordViewModel: NSObject {
                 self.displayLink = CADisplayLink(target: self, selector: #selector(NewFeedVoiceRecordViewModel.checkVoiceRecordValue(_:)))
                 self.displayLink?.frameInterval = 6 // 频率为每秒 10 次
                 self.displayLink?.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
-                
-                break
             case .FinishRecord:
                 break
             }

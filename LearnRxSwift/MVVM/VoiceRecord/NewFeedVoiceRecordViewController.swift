@@ -102,7 +102,7 @@ class NewFeedVoiceRecordViewController: UIViewController {
                 
                 let fullWidth = self.voiceRecordSampleView.bounds.width
                 
-                if !self.voiceRecordSampleView.sampleValues.isEmpty {
+                if self.voiceRecordSampleView.sampleValues.isNotEmpty {
                     let firstIndexPath = NSIndexPath(forItem: 0, inSection: 0)
                     self.voiceRecordSampleView.sampleCollectionView.scrollToItemAtIndexPath(firstIndexPath, atScrollPosition: .Left, animated: true)
                 }
@@ -132,7 +132,7 @@ class NewFeedVoiceRecordViewController: UIViewController {
             self.timeLabel.text = String(format: "%02d:%02d.%d", minutes, seconds, subSeconds)
         }.addDisposableTo(rx_disposeBag)
         
-        viewModel.audioPlaying.asDriver().driveNext {
+        viewModel.audioPlaying.asDriver().driveNext { [unowned self] in
             switch $0 {
             case true:  self.playButton.setImage(UIImage(named: "button_voice_pause"), forState: .Normal)
             case false: self.playButton.setImage(UIImage(named: "button_voice_play"), forState: .Normal)
@@ -179,42 +179,4 @@ class NewFeedVoiceRecordViewController: UIViewController {
         
     }
     
-    // MARK: - Actions
-    
-    @IBAction private func cancel(sender: UIBarButtonItem) {
-        
-        dismissViewControllerAnimated(true, completion: { [weak self] in
-            
-//            self?.displayLink?.invalidate()
-//            self?.playbackTimer?.invalidate()
-            
-            YepAudioService.sharedManager.endRecord()
-            
-//            if let voiceFileURL = self?.voiceFileURL {
-//                do {
-//                    try NSFileManager.defaultManager().removeItemAtURL(voiceFileURL)
-//                } catch let error {
-//                    println("delete voiceFileURL error: \(error)")
-//                }
-//            }
-            })
-    }
-
-    // MARK: - Navigation
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-//        if let feedVoiceBox = sender as? Box<FeedVoice> where segue.identifier == "showNewFeed" {
-//            let vc = segue.destinationViewController as! NewFeedViewController
-            
-//            vc.attachment = .Voice(feedVoiceBox.value)
-            
-//            vc.preparedSkill = preparedSkill
-            
-//            vc.beforeUploadingFeedAction = beforeUploadingFeedAction
-//            vc.afterCreatedFeedAction = afterCreatedFeedAction
-//            vc.getFeedsViewController = getFeedsViewController
-//        }
-
-    }
 }

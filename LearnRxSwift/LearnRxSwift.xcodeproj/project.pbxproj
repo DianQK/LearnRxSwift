@@ -52,6 +52,7 @@
 		267B59CD1CCDD14500459399 /* VoiceRecordSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59C81CCDD14500459399 /* VoiceRecordSampleView.swift */; };
 		267B59D01CCDD14500459399 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59CB1CCDD14500459399 /* RecordButton.swift */; };
 		267B59D31CCDDE0700459399 /* HorizontalLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59D21CCDDE0700459399 /* HorizontalLineView.swift */; };
+		2683BE911CCE745B0015BF78 /* Proposer+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683BE901CCE745B0015BF78 /* Proposer+Rx.swift */; };
 		269772451CCE344C006CBC49 /* YepHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772441CCE344C006CBC49 /* YepHelper.swift */; };
 		269772481CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772471CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift */; };
 		26979D901CCDF27D004955B0 /* RxYepAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26979D8F1CCDF27D004955B0 /* RxYepAudioService.swift */; };
@@ -135,6 +136,7 @@
 		267B59C81CCDD14500459399 /* VoiceRecordSampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecordSampleView.swift; sourceTree = "<group>"; };
 		267B59CB1CCDD14500459399 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		267B59D21CCDDE0700459399 /* HorizontalLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLineView.swift; sourceTree = "<group>"; };
+		2683BE901CCE745B0015BF78 /* Proposer+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Proposer+Rx.swift"; sourceTree = "<group>"; };
 		26942DA01C8494630091ED4A /* Rx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Rx.playground; sourceTree = "<group>"; };
 		269772441CCE344C006CBC49 /* YepHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YepHelper.swift; sourceTree = "<group>"; };
 		269772471CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxAVAudioPlayerDelegateProxy.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				26979D8F1CCDF27D004955B0 /* RxYepAudioService.swift */,
 				269772441CCE344C006CBC49 /* YepHelper.swift */,
 				267B59B41CCDCDDC00459399 /* LaunchScreen.storyboard */,
+				2683BE901CCE745B0015BF78 /* Proposer+Rx.swift */,
 			);
 			path = VoiceRecord;
 			sourceTree = "<group>";
@@ -1149,6 +1152,7 @@
 				267B59A91CCDCD9B00459399 /* SupportFunction.swift in Sources */,
 				26979D901CCDF27D004955B0 /* RxYepAudioService.swift in Sources */,
 				267B59C31CCDCEE700459399 /* RxAVAudioRecorderDelegateProxy.swift in Sources */,
+				2683BE911CCE745B0015BF78 /* Proposer+Rx.swift in Sources */,
 				267B59C21CCDCEE700459399 /* NewFeedVoiceRecordViewModel.swift in Sources */,
 				269772481CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift in Sources */,
 				267B59D01CCDD14500459399 /* RecordButton.swift in Sources */,
