@@ -42,20 +42,6 @@
 		267B59AA1CCDCD9D00459399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CC091B1C797EB5006B721F /* Assets.xcassets */; };
 		267B59AB1CCDCD9F00459399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC091A1C797EB5006B721F /* AppDelegate.swift */; };
 		267B59AC1CCDCDA200459399 /* UIView+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C324B1CA61FE800081BDE /* UIView+IB.swift */; };
-		267B59B81CCDCDDC00459399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B59B41CCDCDDC00459399 /* LaunchScreen.storyboard */; };
-		267B59B91CCDCDDC00459399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B59B61CCDCDDC00459399 /* Main.storyboard */; };
-		267B59C01CCDCEE700459399 /* NewFeedVoiceRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B59BB1CCDCEE700459399 /* NewFeedVoiceRecord.storyboard */; };
-		267B59C11CCDCEE700459399 /* NewFeedVoiceRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59BC1CCDCEE700459399 /* NewFeedVoiceRecordViewController.swift */; };
-		267B59C21CCDCEE700459399 /* NewFeedVoiceRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59BD1CCDCEE700459399 /* NewFeedVoiceRecordViewModel.swift */; };
-		267B59C31CCDCEE700459399 /* RxAVAudioRecorderDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59BE1CCDCEE700459399 /* RxAVAudioRecorderDelegateProxy.swift */; };
-		267B59C41CCDCEE700459399 /* YepAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59BF1CCDCEE700459399 /* YepAudioService.swift */; };
-		267B59CD1CCDD14500459399 /* VoiceRecordSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59C81CCDD14500459399 /* VoiceRecordSampleView.swift */; };
-		267B59D01CCDD14500459399 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59CB1CCDD14500459399 /* RecordButton.swift */; };
-		267B59D31CCDDE0700459399 /* HorizontalLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B59D21CCDDE0700459399 /* HorizontalLineView.swift */; };
-		2683BE911CCE745B0015BF78 /* Proposer+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683BE901CCE745B0015BF78 /* Proposer+Rx.swift */; };
-		269772451CCE344C006CBC49 /* YepHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772441CCE344C006CBC49 /* YepHelper.swift */; };
-		269772481CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269772471CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift */; };
-		26979D901CCDF27D004955B0 /* RxYepAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26979D8F1CCDF27D004955B0 /* RxYepAudioService.swift */; };
 		269CAABB1CACD23000057E87 /* ObservableLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABA1CACD23000057E87 /* ObservableLoginViewController.swift */; };
 		269CAABD1CACD25F00057E87 /* ObservableLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABC1CACD25F00057E87 /* ObservableLoginViewModel.swift */; };
 		269CAABF1CACF1D700057E87 /* DriverLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CAABE1CACF1D700057E87 /* DriverLoginViewController.swift */; };
@@ -126,21 +112,7 @@
 		266E196D1C7AFF7E00D8562C /* Request+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+ObjectMapper.swift"; sourceTree = "<group>"; };
 		266E19701C7B2D8200D8562C /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		267B59971CCDCD6700459399 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		267B59B51CCDCDDC00459399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		267B59B71CCDCDDC00459399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		267B59BB1CCDCEE700459399 /* NewFeedVoiceRecord.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewFeedVoiceRecord.storyboard; sourceTree = "<group>"; };
-		267B59BC1CCDCEE700459399 /* NewFeedVoiceRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeedVoiceRecordViewController.swift; sourceTree = "<group>"; };
-		267B59BD1CCDCEE700459399 /* NewFeedVoiceRecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeedVoiceRecordViewModel.swift; sourceTree = "<group>"; };
-		267B59BE1CCDCEE700459399 /* RxAVAudioRecorderDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxAVAudioRecorderDelegateProxy.swift; sourceTree = "<group>"; };
-		267B59BF1CCDCEE700459399 /* YepAudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YepAudioService.swift; sourceTree = "<group>"; };
-		267B59C81CCDD14500459399 /* VoiceRecordSampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecordSampleView.swift; sourceTree = "<group>"; };
-		267B59CB1CCDD14500459399 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
-		267B59D21CCDDE0700459399 /* HorizontalLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLineView.swift; sourceTree = "<group>"; };
-		2683BE901CCE745B0015BF78 /* Proposer+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Proposer+Rx.swift"; sourceTree = "<group>"; };
 		26942DA01C8494630091ED4A /* Rx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Rx.playground; sourceTree = "<group>"; };
-		269772441CCE344C006CBC49 /* YepHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YepHelper.swift; sourceTree = "<group>"; };
-		269772471CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxAVAudioPlayerDelegateProxy.swift; sourceTree = "<group>"; };
-		26979D8F1CCDF27D004955B0 /* RxYepAudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxYepAudioService.swift; sourceTree = "<group>"; };
 		269CAABA1CACD23000057E87 /* ObservableLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableLoginViewController.swift; sourceTree = "<group>"; };
 		269CAABC1CACD25F00057E87 /* ObservableLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableLoginViewModel.swift; sourceTree = "<group>"; };
 		269CAABE1CACF1D700057E87 /* DriverLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverLoginViewController.swift; sourceTree = "<group>"; };
@@ -286,7 +258,6 @@
 				26CC092C1C7989A7006B721F /* RxNetwork */,
 				26356E2A1CA2FC5C00148B03 /* RxScheduler */,
 				260C32001CA526F100081BDE /* RxExtensions */,
-				267B59981CCDCD6700459399 /* MVVM */,
 				26CC09191C797EB5006B721F /* Supports */,
 				26457B6B1C775777009ED146 /* Products */,
 				2F408857BF60085258807917 /* Pods */,
@@ -359,59 +330,6 @@
 				26CC09361C7989A7006B721F /* LaunchScreen.storyboard */,
 			);
 			path = Supports;
-			sourceTree = "<group>";
-		};
-		267B59981CCDCD6700459399 /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				267B59BA1CCDCEE700459399 /* VoiceRecord */,
-				267B59B61CCDCDDC00459399 /* Main.storyboard */,
-			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
-		267B59BA1CCDCEE700459399 /* VoiceRecord */ = {
-			isa = PBXGroup;
-			children = (
-				267B59C51CCDD14500459399 /* Views */,
-				267B59BB1CCDCEE700459399 /* NewFeedVoiceRecord.storyboard */,
-				267B59BC1CCDCEE700459399 /* NewFeedVoiceRecordViewController.swift */,
-				267B59BD1CCDCEE700459399 /* NewFeedVoiceRecordViewModel.swift */,
-				267B59BE1CCDCEE700459399 /* RxAVAudioRecorderDelegateProxy.swift */,
-				269772471CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift */,
-				267B59BF1CCDCEE700459399 /* YepAudioService.swift */,
-				26979D8F1CCDF27D004955B0 /* RxYepAudioService.swift */,
-				269772441CCE344C006CBC49 /* YepHelper.swift */,
-				267B59B41CCDCDDC00459399 /* LaunchScreen.storyboard */,
-				2683BE901CCE745B0015BF78 /* Proposer+Rx.swift */,
-			);
-			path = VoiceRecord;
-			sourceTree = "<group>";
-		};
-		267B59C51CCDD14500459399 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				267B59D11CCDDE0700459399 /* HorizontalLine */,
-				267B59C61CCDD14500459399 /* AudioWaves */,
-				267B59CB1CCDD14500459399 /* RecordButton.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		267B59C61CCDD14500459399 /* AudioWaves */ = {
-			isa = PBXGroup;
-			children = (
-				267B59C81CCDD14500459399 /* VoiceRecordSampleView.swift */,
-			);
-			path = AudioWaves;
-			sourceTree = "<group>";
-		};
-		267B59D11CCDDE0700459399 /* HorizontalLine */ = {
-			isa = PBXGroup;
-			children = (
-				267B59D21CCDDE0700459399 /* HorizontalLineView.swift */,
-			);
-			path = HorizontalLine;
 			sourceTree = "<group>";
 		};
 		269CAAB91CACD21800057E87 /* Units */ = {
@@ -792,10 +710,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267B59B91CCDCDDC00459399 /* Main.storyboard in Resources */,
 				267B59AA1CCDCD9D00459399 /* Assets.xcassets in Resources */,
-				267B59B81CCDCDDC00459399 /* LaunchScreen.storyboard in Resources */,
-				267B59C01CCDCEE700459399 /* NewFeedVoiceRecord.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1145,20 +1060,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267B59CD1CCDD14500459399 /* VoiceRecordSampleView.swift in Sources */,
 				267B59AC1CCDCDA200459399 /* UIView+IB.swift in Sources */,
 				267B59AB1CCDCD9F00459399 /* AppDelegate.swift in Sources */,
-				269772451CCE344C006CBC49 /* YepHelper.swift in Sources */,
 				267B59A91CCDCD9B00459399 /* SupportFunction.swift in Sources */,
-				26979D901CCDF27D004955B0 /* RxYepAudioService.swift in Sources */,
-				267B59C31CCDCEE700459399 /* RxAVAudioRecorderDelegateProxy.swift in Sources */,
-				2683BE911CCE745B0015BF78 /* Proposer+Rx.swift in Sources */,
-				267B59C21CCDCEE700459399 /* NewFeedVoiceRecordViewModel.swift in Sources */,
-				269772481CCE3B05006CBC49 /* RxAVAudioPlayerDelegateProxy.swift in Sources */,
-				267B59D01CCDD14500459399 /* RecordButton.swift in Sources */,
-				267B59C11CCDCEE700459399 /* NewFeedVoiceRecordViewController.swift in Sources */,
-				267B59C41CCDCEE700459399 /* YepAudioService.swift in Sources */,
-				267B59D31CCDDE0700459399 /* HorizontalLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1251,23 +1155,6 @@
 				26457B8F1C77579F009ED146 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		267B59B41CCDCDDC00459399 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				267B59B51CCDCDDC00459399 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		267B59B61CCDCDDC00459399 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				267B59B71CCDCDDC00459399 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		26CC09311C7989A7006B721F /* Main.storyboard */ = {
