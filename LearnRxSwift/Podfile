@@ -12,7 +12,7 @@ def rx_test_pods
 end
 
 def rx_data_pods
-    pod 'RxDataSources' # ,:git => 'https://github.com/RxSwiftCommunity/RxDataSources.git'
+    pod 'RxDataSources', '~>0.8.1'
 end
 
 def net_pods

@@ -45,8 +45,8 @@ class AdvanceTableViewController: UITableViewController {
     func skinTableViewDataSource(dataSource: RxTableViewSectionedReloadDataSource<AdvanceSectionModel>) {
         dataSource.configureCell = { (_, tv, ip, i) in
             let cell = tv.dequeueReusableCellWithIdentifier("AdvanceCell") as! AdvanceTableViewCell
-            cell.nameLabel.text = i.value.name
-            cell.ageLabel.text = String(i.value.age)
+            cell.nameLabel.text = i.name
+            cell.ageLabel.text = String(i.age)
             return cell
         }
 //        dataSource.titleForHeaderInSection = { [unowned dataSource] sectionIndex in

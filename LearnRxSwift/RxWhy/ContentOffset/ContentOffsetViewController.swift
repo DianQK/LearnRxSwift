@@ -32,9 +32,7 @@ class ContentOffsetViewController: UITableViewController {
             .bindTo(tableView.rx_itemsWithCellIdentifier("Cell", cellType: UITableViewCell.self)) { (_, element, cell) in
                 cell.textLabel?.text = "\(element)"
             }.addDisposableTo(disposeBag)
-        
-//        tableView.contentOffset = 6r7t890
-        
+
     }
 
 }

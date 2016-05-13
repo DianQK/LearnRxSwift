@@ -42,9 +42,7 @@ class BasicTableViewController: UITableViewController {
             .subscribeNext { model in
                 Alert.showInfo(model.name, message: "\(model.age)")
             }.addDisposableTo(disposeBag)
-        
+
     }
-    
-    
 
 }

@@ -29,8 +29,8 @@ class AlamofireTableViewController: UITableViewController {
         let tvDataSource = RxTableViewSectionedReloadDataSource<AlamofireSectionModel>()
         tvDataSource.configureCell = { (_, tv, ip, i) in
             let cell = tv.dequeueReusableCellWithIdentifier("UserCell") as! UserTableViewCell
-            cell.nameLabel.text = i.value.name
-            cell.ageLabel.text = String(i.value.age)
+            cell.nameLabel.text = i.name
+            cell.ageLabel.text = String(i.age)
             return cell
         }
         

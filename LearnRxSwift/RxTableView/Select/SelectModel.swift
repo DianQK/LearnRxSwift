@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxDataSources
 
 struct SelectModel {
     let name: String
@@ -16,6 +17,12 @@ struct SelectModel {
 extension SelectModel: Hashable {
     var hashValue: Int {
         return name.hashValue
+    }
+}
+
+extension SelectModel: IdentifiableType {
+    var identity: Int {
+        return hashValue
     }
 }
 

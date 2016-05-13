@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxDataSources
 
 struct AdvanceModel {
     let name: String
@@ -16,6 +17,12 @@ struct AdvanceModel {
 extension AdvanceModel: Hashable {
     var hashValue: Int {
         return name.hashValue
+    }
+}
+
+extension AdvanceModel: IdentifiableType {
+    var identity: Int {
+        return hashValue
     }
 }
 

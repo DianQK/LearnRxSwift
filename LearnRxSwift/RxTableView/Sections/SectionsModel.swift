@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxDataSources
 
 struct SectionsModel {
     let name: String
@@ -16,6 +17,12 @@ struct SectionsModel {
 extension SectionsModel: Hashable {
     var hashValue: Int {
         return name.hashValue
+    }
+}
+
+extension SectionsModel: IdentifiableType {
+    var identity: Int {
+        return hashValue
     }
 }
 

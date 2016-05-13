@@ -7,6 +7,7 @@
 //
 
 import ObjectMapper
+import RxDataSources
 
 struct UserListModel {
     var users: [UserModel]!
@@ -31,6 +32,12 @@ extension UserListModel: Hashable {
     }
 }
 
+extension UserListModel: IdentifiableType {
+    var identity: Int {
+        return hashValue
+    }
+}
+
 func ==(lhs: UserListModel, rhs: UserListModel) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
@@ -47,6 +54,12 @@ extension UserModel: Mappable {
 extension UserModel: Hashable {
     var hashValue: Int {
         return name.hashValue
+    }
+}
+
+extension UserModel: IdentifiableType {
+    var identity: Int {
+        return hashValue
     }
 }
 

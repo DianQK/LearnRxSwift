@@ -30,24 +30,17 @@ class SelectTableViewController: UITableViewController {
         tableView.dataSource = nil
         tableView.delegate = nil
         
-        tableView.rx_itemSelected
-            .subscribeNext { indexPath in
-                let userInfo = SelectTableViewController.initialValue[indexPath.row]
-                Alert.showInfo(userInfo.name, message: "\(userInfo.age)")
-            }
-            .addDisposableTo(disposeBag)
-        
-        tableView.rx_modelSelected(IdentifiableValue<SelectModel>)
+        tableView.rx_modelSelected(SelectModel)
             .subscribeNext { model in
-                Alert.showInfo(model.identity.name, message: "\(model.identity.age)")
+                Alert.showInfo(model.name, message: "\(model.age)")
             }
             .addDisposableTo(disposeBag)
         
         let tvDataSource = RxTableViewSectionedReloadDataSource<SelectSectionModel>()
         tvDataSource.configureCell = { (_, tv, ip, i) in
             let cell = tv.dequeueReusableCellWithIdentifier("SelectCell") as! SelectTableViewCell
-            cell.nameLabel.text = i.value.name
-            cell.ageLabel.text = String(i.value.age)
+            cell.nameLabel.text = i.name
+            cell.ageLabel.text = String(i.age)
             return cell
         }
         sections.asObservable()

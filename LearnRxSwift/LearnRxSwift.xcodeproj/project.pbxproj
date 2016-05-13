@@ -77,6 +77,8 @@
 		26D37AA51C78857700D7B1B4 /* SectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D37AA41C78857700D7B1B4 /* SectionsModel.swift */; };
 		26D37AA71C78858900D7B1B4 /* SelectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D37AA61C78858900D7B1B4 /* SelectModel.swift */; };
 		26D37AA91C78859200D7B1B4 /* AdvanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D37AA81C78859200D7B1B4 /* AdvanceModel.swift */; };
+		26F5D8301CE5819400824488 /* RxDataSources+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F5D82F1CE5819400824488 /* RxDataSources+Extension.swift */; };
+		26F5D8311CE5819800824488 /* RxDataSources+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F5D82F1CE5819400824488 /* RxDataSources+Extension.swift */; };
 		7F7E1C1086493ABE2E69636B /* Pods_RxTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F46A3BB5115DAC42D1925D /* Pods_RxTableView.framework */; };
 		8D8728DB5603A8D78E95090F /* Pods_RxWhy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8C61C012EC489BEB171B58 /* Pods_RxWhy.framework */; };
 		B491FC200B11C9270D41238B /* Pods_RxExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F516B84DEA7AB757A7489F /* Pods_RxExtensions.framework */; };
@@ -147,6 +149,7 @@
 		26D37AA41C78857700D7B1B4 /* SectionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsModel.swift; sourceTree = "<group>"; };
 		26D37AA61C78858900D7B1B4 /* SelectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectModel.swift; sourceTree = "<group>"; };
 		26D37AA81C78859200D7B1B4 /* AdvanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvanceModel.swift; sourceTree = "<group>"; };
+		26F5D82F1CE5819400824488 /* RxDataSources+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxDataSources+Extension.swift"; sourceTree = "<group>"; };
 		28F46A3BB5115DAC42D1925D /* Pods_RxTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8C61C012EC489BEB171B58 /* Pods_RxWhy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxWhy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3938773BEC5972BFB1022E01 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -357,6 +360,7 @@
 		26CC09191C797EB5006B721F /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				26F5D82F1CE5819400824488 /* RxDataSources+Extension.swift */,
 				26CC091A1C797EB5006B721F /* AppDelegate.swift */,
 				26CC091B1C797EB5006B721F /* Assets.xcassets */,
 				26CC091C1C797EB5006B721F /* Info.plist */,
@@ -1078,6 +1082,7 @@
 				2649A0AE1C80119A00F032B1 /* SupportFunction.swift in Sources */,
 				266E196A1C7AB90900D8562C /* UserTableViewCell.swift in Sources */,
 				26CC09571C79CE54006B721F /* Response+ObjectMapper.swift in Sources */,
+				26F5D8311CE5819800824488 /* RxDataSources+Extension.swift in Sources */,
 				260C324E1CA6208900081BDE /* UIView+IB.swift in Sources */,
 				266E19711C7B2D8200D8562C /* UserModel.swift in Sources */,
 				26CC095A1C7AAA19006B721F /* UserAPI.swift in Sources */,
@@ -1096,6 +1101,7 @@
 				26D37A961C787DB800D7B1B4 /* SelectTableViewController.swift in Sources */,
 				26D37AA71C78858900D7B1B4 /* SelectModel.swift in Sources */,
 				26D37AA51C78857700D7B1B4 /* SectionsModel.swift in Sources */,
+				26F5D8301CE5819400824488 /* RxDataSources+Extension.swift in Sources */,
 				26D37AA11C78823C00D7B1B4 /* AdvanceTableViewCell.swift in Sources */,
 				260C324D1CA6208900081BDE /* UIView+IB.swift in Sources */,
 				26D37AA31C78843800D7B1B4 /* BasicModel.swift in Sources */,
