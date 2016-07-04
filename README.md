@@ -43,6 +43,10 @@
 
 * [101 番外：为什么 label.rx_text 不是 ObservableType](http://t.swift.gg/d/16-101-label-rx-text-observabletype)
 * [102 番外：更优雅的处理 TableView Select](http://t.swift.gg/d/14-102-tableview-select)
+* [在实践中应用 RxSwift 1 － 使用 Result 传递值](http://t.swift.gg/d/56-rxswift-1-result)
+* [在实践中应用 RxSwift 2 － 使用函数式复用代码](http://t.swift.gg/d/57-rxswift-2)
+* [RxSwift 下的 map 与 flatMap](http://t.swift.gg/d/58-rxswift-map-flatmap)
+* [在实践中应用 RxSwift 3 处理 Cell](http://t.swift.gg/d/60-rxswift-3-cell)
 
 （称之为教程有些夸张了~跑。。。
 
