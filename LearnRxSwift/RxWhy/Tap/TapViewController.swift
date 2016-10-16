@@ -19,9 +19,9 @@ class TapViewController: UIViewController {
         super.viewDidLoad()
         
         button.rx.tap
-            .subscribe {
+            .subscribe(onNext: {
                 print("Tap")
-            }.addDisposableTo(disposeBag)
+            }).addDisposableTo(disposeBag)
         
     }
 
