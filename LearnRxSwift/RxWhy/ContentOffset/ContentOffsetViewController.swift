@@ -23,9 +23,9 @@ class ContentOffsetViewController: UITableViewController {
         tableView
             .rx.contentOffset
             .map { $0.y }
-            .subscribe { [unowned self] in
+            .subscribe(onNext: { [unowned self] in
                 self.title = "contentOffset.x = \($0)"
-            }.addDisposableTo(disposeBag)
+            }).addDisposableTo(disposeBag)
         // ---------
 
         Observable.just([1, 2, 3, 4, 5, 6, 7])

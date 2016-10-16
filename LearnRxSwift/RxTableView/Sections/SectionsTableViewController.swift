@@ -45,9 +45,9 @@ class SectionsTableViewController: UITableViewController {
         sections.value = [TableSectionModel(model: "", items: SectionsTableViewController.initialValue)]
         
         tableView.rx.modelSelected(SectionsModel.self)
-            .subscribe {
+            .subscribe(onNext: {
                 print($0)
-            }
+            })
             .addDisposableTo(disposeBag)
 
     }
