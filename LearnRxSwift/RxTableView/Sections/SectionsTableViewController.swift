@@ -32,20 +32,20 @@ class SectionsTableViewController: UITableViewController {
 
         let tvDataSource = RxTableViewSectionedReloadDataSource<TableSectionModel>()
         tvDataSource.configureCell = { (_, tv, ip, i) in
-            let cell = tv.dequeueReusableCellWithIdentifier("SectionsCell") as! SectionsTableViewCell
+            let cell = tv.dequeueReusableCell(withIdentifier: "SectionsCell") as! SectionsTableViewCell
             cell.nameLabel.text = i.name
             cell.ageLabel.text = String(i.age)
             return cell
         }
         
         sections.asObservable()
-            .bindTo(tableView.rx_itemsWithDataSource(tvDataSource))
+            .bindTo(tableView.rx.items(dataSource: tvDataSource))
             .addDisposableTo(disposeBag)
         
         sections.value = [TableSectionModel(model: "", items: SectionsTableViewController.initialValue)]
         
-        tableView.rx_modelSelected(SectionsModel)
-            .subscribeNext {
+        tableView.rx.modelSelected(SectionsModel.self)
+            .subscribe {
                 print($0)
             }
             .addDisposableTo(disposeBag)

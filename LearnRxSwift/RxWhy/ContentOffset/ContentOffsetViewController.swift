@@ -21,15 +21,15 @@ class ContentOffsetViewController: UITableViewController {
         
         // ---------
         tableView
-            .rx_contentOffset
+            .rx.contentOffset
             .map { $0.y }
-            .subscribeNext { [unowned self] in
+            .subscribe { [unowned self] in
                 self.title = "contentOffset.x = \($0)"
             }.addDisposableTo(disposeBag)
         // ---------
-        
+
         Observable.just([1, 2, 3, 4, 5, 6, 7])
-            .bindTo(tableView.rx_itemsWithCellIdentifier("Cell", cellType: UITableViewCell.self)) { (_, element, cell) in
+            .bindTo(tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (_, element, cell) in
                 cell.textLabel?.text = "\(element)"
             }.addDisposableTo(disposeBag)
 

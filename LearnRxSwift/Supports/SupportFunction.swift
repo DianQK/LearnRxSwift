@@ -18,24 +18,24 @@ let host = "https://rxswift.leanapp.cn"
 
 struct Alert {
     
-    static func showInfo(title: String, message: String? = nil) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-        UIApplication.topViewController()?.presentViewController(alertController, animated: true, completion: nil)
+    static func showInfo(_ title: String, message: String? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
     }
     
-    static func rx_showInfo(title: String, message: String? = nil) -> Observable<UIAlertActionStyle> {
+    static func rx_showInfo(_ title: String, message: String? = nil) -> Observable<UIAlertActionStyle> {
         return Observable.create { observer in
             
-            let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             
-            alertController.addAction(UIAlertAction(title: "OK", style: .Default) { action in
-                observer.on(.Next(action.style))
+            alertController.addAction(UIAlertAction(title: "OK", style: .default) { action in
+                observer.on(.next(action.style))
                 })
             
-            UIApplication.topViewController()?.presentViewController(alertController, animated: true, completion: nil)
+            UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
             
-            return NopDisposable.instance
+            return Disposables.create()
             
         }
     }
@@ -43,7 +43,7 @@ struct Alert {
 
 extension UIApplication {
     
-    class func topViewController(base: UIViewController? = UIApplication.sharedApplication().keyWindow?.rootViewController) -> UIViewController? {
+    class func topViewController(_ base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return topViewController(nav.visibleViewController)
         }
@@ -62,12 +62,12 @@ extension UIApplication {
         return AnyObserver { event in
             MainScheduler.ensureExecutingOnScheduler()
             switch event {
-            case .Next(let value):
-                self.networkActivityIndicatorVisible = value
-            case .Error:
-                self.networkActivityIndicatorVisible = false
+            case .next(let value):
+                self.isNetworkActivityIndicatorVisible = value
+            case .error:
+                self.isNetworkActivityIndicatorVisible = false
                 break
-            case .Completed:
+            case .completed:
                 break
             }
         }
@@ -76,13 +76,13 @@ extension UIApplication {
 
 extension UITableView {
     
-    public func rx_modelItemSelected<T>(modelType: T.Type) -> ControlEvent<(model: T, item: NSIndexPath)> {
-        let source: Observable<(model: T, item: NSIndexPath)> = rx_itemSelected.flatMap { [weak self] indexPath -> Observable<(model: T, item: NSIndexPath)> in
+    public func rx_modelItemSelected<T>(_ modelType: T.Type) -> ControlEvent<(model: T, item: IndexPath)> {
+        let source: Observable<(model: T, item: IndexPath)> = rx.itemSelected.flatMap { [weak self] indexPath -> Observable<(model: T, item: IndexPath)> in
             guard let view = self else {
                 return Observable.empty()
             }
             
-            return Observable.just((model: try view.rx_modelAtIndexPath(indexPath), item: indexPath))
+            return Observable.just((model: try view.rx.model(indexPath), item:indexPath))
         }
         
         return ControlEvent(events: source)

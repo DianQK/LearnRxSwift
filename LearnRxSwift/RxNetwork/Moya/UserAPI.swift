@@ -11,14 +11,14 @@ import Moya
 let UserProvider = RxMoyaProvider<UserAPI>()
 
 public enum UserAPI {
-    case Users
+    case users
 }
 
 extension UserAPI: TargetType {
     public var baseURL: NSURL { return NSURL(string: host)! }
     public var path: String {
         switch self {
-        case .Users:
+        case .users:
             return "/users"
         }
     }
@@ -33,7 +33,7 @@ extension UserAPI: TargetType {
     
     public var sampleData: NSData {
         switch self {
-        case .Users:
+        case .users:
             return "".dataUsingEncoding(NSUTF8StringEncoding)!
         }
     }

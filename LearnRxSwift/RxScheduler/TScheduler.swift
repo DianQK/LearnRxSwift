@@ -9,21 +9,21 @@
 import RxSwift
 
 public enum TScheduler {
-    case Main
-    case Serial(DispatchQueueSchedulerQOS)
-    case Concurrent(DispatchQueueSchedulerQOS)
-    case Operation(NSOperationQueue)
+    case main
+    case serial(DispatchQueueSchedulerQOS)
+    case concurrent(DispatchQueueSchedulerQOS)
+    case operation(OperationQueue)
     
     
     public func scheduler() -> ImmediateSchedulerType {
         switch self {
-        case .Main:
+        case .main:
             return MainScheduler.instance
-        case .Serial(let QOS):
+        case .serial(let QOS):
             return SerialDispatchQueueScheduler(globalConcurrentQueueQOS: QOS)
-        case .Concurrent(let QOS):
+        case .concurrent(let QOS):
             return ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: QOS)
-        case .Operation(let queue):
+        case .operation(let queue):
             return OperationQueueScheduler(operationQueue: queue)
         }
     }
@@ -31,8 +31,7 @@ public enum TScheduler {
 
 extension ObservableType {
     
-    @warn_unused_result(message="http://git.io/rxs.uo")
-    public func observeOn(scheduler: TScheduler) -> RxSwift.Observable<Self.E> {
+    public func observeOn(_ scheduler: TScheduler) -> RxSwift.Observable<Self.E> {
         return observeOn(scheduler.scheduler())
     }
     

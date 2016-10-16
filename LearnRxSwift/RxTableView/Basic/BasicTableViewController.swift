@@ -29,19 +29,19 @@ class BasicTableViewController: UITableViewController {
         
         dataSource.asObservable()
 //            .map { $0.sort(>) }
-            .bindTo(tableView.rx_itemsWithCellIdentifier("BasicCell", cellType: BasicTableViewCell.self)) { (_, element, cell) in
+            .bindTo(tableView.rx.items(cellIdentifier: "BasicCell", cellType: BasicTableViewCell.self)) { (_, element, cell) in
                 cell.nameLabel.text = element.name
                 cell.ageLabel.text = String(element.age)
             }.addDisposableTo(disposeBag)
         
-        dataSource.value.appendContentsOf(BasicTableViewController.initialValue)
+        dataSource.value.append(contentsOf: BasicTableViewController.initialValue)
         /**
         *  Select
         */
-        tableView.rx_modelSelected(BasicModel)
-            .subscribeNext { model in
+        tableView.rx.modelSelected(BasicModel.self)
+            .subscribe(onNext: { model in
                 Alert.showInfo(model.name, message: "\(model.age)")
-            }.addDisposableTo(disposeBag)
+            }).addDisposableTo(disposeBag)
 
     }
 

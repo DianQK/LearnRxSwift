@@ -34,17 +34,17 @@ class AdvanceTableViewController: UITableViewController {
         
         skinTableViewDataSource(tvDataSource)
         sections.asObservable()
-            .bindTo(tableView.rx_itemsWithDataSource(tvDataSource))
+            .bindTo(tableView.rx.items(dataSource: tvDataSource))
             .addDisposableTo(disposeBag)
         sections.value = [AdvanceSectionModel(model: "Section 1", items: AdvanceTableViewController.initialValue)]
         
-        tableView.rx_setDelegate(self)
-        
+        tableView.rx.setDelegate(self)
+            .addDisposableTo(disposeBag)
     }
     
-    func skinTableViewDataSource(dataSource: RxTableViewSectionedReloadDataSource<AdvanceSectionModel>) {
+    func skinTableViewDataSource(_ dataSource: RxTableViewSectionedReloadDataSource<AdvanceSectionModel>) {
         dataSource.configureCell = { (_, tv, ip, i) in
-            let cell = tv.dequeueReusableCellWithIdentifier("AdvanceCell") as! AdvanceTableViewCell
+            let cell = tv.dequeueReusableCell(withIdentifier: "AdvanceCell") as! AdvanceTableViewCell
             cell.nameLabel.text = i.name
             cell.ageLabel.text = String(i.age)
             return cell
@@ -60,24 +60,24 @@ class AdvanceTableViewController: UITableViewController {
 
 extension AdvanceTableViewController {
     /// 定制 Header Section Cell
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let section = tvDataSource.sectionAtIndex(section)
 
         let label = UILabel(frame: CGRect.zero)
 
         label.text = "  \(section.model)"
-        label.textColor = UIColor.whiteColor()
-        label.backgroundColor = UIColor.darkGrayColor()
+        label.textColor = UIColor.white
+        label.backgroundColor = UIColor.darkGray
         label.alpha = 0.9
         
         return label
     }
     /// 定制 Header Section Cell 的高
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
     /// 定制 Cell 的高
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
 }

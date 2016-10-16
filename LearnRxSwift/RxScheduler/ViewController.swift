@@ -14,18 +14,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    let request = NSURLRequest(URL: NSURL(string: "https://github.com/fluidicon.png")!)
+    let request = URLRequest(url: URL(string: "https://github.com/fluidicon.png")!)
     
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSURLSession.sharedSession()
-            .rx_data(request)
+        URLSession.shared
+            .rx.data(request)
             .map { UIImage(data: $0) }
-            .observeOn(.Main)
-            .bindTo(imageView.rx_image)
+            .observeOn(.main)
+            .bindTo(imageView.rx.image)
             .addDisposableTo(disposeBag)
 
     }
