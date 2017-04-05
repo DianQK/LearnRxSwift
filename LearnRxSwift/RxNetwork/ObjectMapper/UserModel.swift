@@ -21,7 +21,7 @@ struct UserModel {
 extension UserListModel: Mappable {
     init?(_ map: Map) { }
     
-    mutating func mapping(map: Map) {
+    mutating func mapping(_ map: Map) {
         users <- map["users"]
     }
 }
@@ -45,7 +45,7 @@ func ==(lhs: UserListModel, rhs: UserListModel) -> Bool {
 extension UserModel: Mappable {
     init?(_ map: Map) { }
     
-    mutating func mapping(map: Map) {
+    mutating func mapping(_ map: Map) {
         name <- map["name"]
         age <- map["age"]
     }

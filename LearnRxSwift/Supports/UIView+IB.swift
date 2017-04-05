@@ -24,13 +24,13 @@ extension UIView {
     @IBInspectable public var borderColor: UIColor? {
         get {
             if let borderColor = layer.borderColor {
-                return UIColor(CGColor: borderColor)
+                return UIColor(cgColor: borderColor)
             } else {
                 return nil
             }
         }
         set {
-            layer.borderColor = newValue?.CGColor
+            layer.borderColor = newValue?.cgColor
         }
     }
     

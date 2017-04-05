@@ -18,10 +18,10 @@ class TapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        button.rx_tap
-            .subscribeNext {
+        button.rx.tap
+            .subscribe(onNext: {
                 print("Tap")
-            }.addDisposableTo(disposeBag)
+            }).addDisposableTo(disposeBag)
         
     }
 

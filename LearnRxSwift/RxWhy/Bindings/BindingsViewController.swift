@@ -20,11 +20,11 @@ class BindingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Observable.combineLatest(firstName.rx_text, lastName.rx_text) { $0 + " " + $1 }
+        Observable.combineLatest(firstName.rx.textInput.text, lastName.rx.textInput.text) { $0 + " " + $1 }
             .map { "Greeting \($0)" }
-            .bindTo(greetingLabel.rx_text)
+            .bindTo(greetingLabel.rx.text)
             .addDisposableTo(disposeBag)
-        
+
         
     }
 

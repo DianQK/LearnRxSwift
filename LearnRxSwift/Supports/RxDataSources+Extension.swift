@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-extension String: IdentifiableType {
+extension String {
     
     public var identity: Int {
         return hashValue
