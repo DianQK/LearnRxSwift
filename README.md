@@ -1,5 +1,12 @@
 # RxSwift 学习指导索引
 
+Hi, 因为年代久远，加之早期对书写文章的熟练程度不足，这个系列暂无继续更新的计划，如果您仍然对我写的文章或是 Demo 感兴趣。您可以 star https://github.com/DianQK/rx-sample-code 项目，这里包含了许多场景下使用 Rx 处理的方式，目前已有十多个 Target 供您参考，除此之外您还可以在我的博客中找到最近更新的文章。
+
+https://blog.dianqk.org
+https://medium.com/@DianQK
+
+:) 放心~博客和 https://github.com/DianQK/rx-sample-code 会持续更新。今年晚些时候还会有一个相对完善的电子书（免费在线阅读、付费下载 pdf、纸质书购买）供阅读，这整理了上面博客以及 demo 中绝大部分的内容，并增加了一些目前还来不及更新到博客上的文章，我会统一加到这里。
+
 ## RxSwift 系列教程
 
 * **前言**
